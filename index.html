@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>My Maps</title>
+  <style>
+    #target {
+      width: 550px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div id="target"></div>
+  <script async 
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7SW1-pY4Rl8EocgwyjPIWocTNi0_LQ74&amp;callback=initMap" defer></script>
+  <script>
+    function initMap(){
+      'use strict'
+
+      /*描画領域の取得*/
+      var target = document.getElementById('target');
+      var map;
+      var nagoya = {lat: 35.1706431, lon: 136.8816945};
+
+      map = new google.maps.Map(target, {
+        center: nagoya,
+        zoom: 6
+      });
+    }
+  </script>
+</body>
+</html>
